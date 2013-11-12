@@ -59,6 +59,17 @@ map <F4> :!gen_hasktags.sh<CR><CR>
 " Mapping to open tag in new tab.
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
+map <D-0> :tablast<CR>
+
 augroup cprog
   " Remove all cprog autocommands
   au!

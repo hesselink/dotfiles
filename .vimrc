@@ -56,8 +56,6 @@ map <F3> :tabe<CR>:FF<CR>
 
 " Generate tags for haskell, and initialize the find file cache.
 map <F4> :!gen_hasktags.sh<CR><CR>
-" Include the generated tags file
-set tags+=~/doc/typlab/product_tags
 " Mapping to open tag in new tab.
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 

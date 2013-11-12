@@ -35,6 +35,7 @@ let &showbreak = '↳ '
 " colorscheme darkblue
 " set bs=2 " allow backspacing over everything in insert mode
 " set tw=78 " always limit the width of text to 78
+set colorcolumn=100 "show colored column at 100 characters, to prevent too wide text.
 
 " Haskell comments, add . and ' to iskeyword, for hothasktags
 autocmd BufRead *.hs,*.lhs setlocal com+=:-- iskeyword=@,48-57,_,192-255,.,39

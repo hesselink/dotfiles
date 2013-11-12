@@ -33,7 +33,7 @@
     conflictstyle = diff3
     defaultToUpstream = true
 [push]
-    default = tracking
+    default = upstream
 [rerere]
     enabled = true
 [rebase]

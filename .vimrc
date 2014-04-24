@@ -1,6 +1,10 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
+" Persist undo history across runs.
+set undodir=~/.vim/undofiles/
+set undofile
+
 set laststatus=2 "always show statusbar
 set autoindent "Automatically indent to previous indent
 set autowrite " write file automatically

@@ -60,6 +60,9 @@ map <F4> :!gen_hasktags.sh<CR><CR>
 " Mapping to open tag in new tab.
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
+" For when you forget to sudo.. really write the file.
+cmap w!! w !sudo tee % >/dev/null
+
 map <D-1> 1gt
 map <D-2> 2gt
 map <D-3> 3gt

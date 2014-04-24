@@ -9,5 +9,7 @@ if exists(":Tabularize")
   vmap <Leader>ai :Tabularize imports<CR>
   nmap <Leader>ar :Tabularize records<CR>
   vmap <Leader>ar :Tabularize records<CR>
+  nmap <Leader>ac :execute "Tabularize /" . expand("<cword>")<CR>
+  vmap <Leader>ac :execute "Tabularize /" . expand("<cword>")<CR>
 endif
 

@@ -38,6 +38,11 @@ let &showbreak = '↳ '
 set colorcolumn=100 "show colored column at 100 characters, to prevent too wide text.
 let mapleader=' '
 
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>e :e
+nnoremap <Leader>p :CtrlP<CR>
+
 " Haskell comments, add . and ' to iskeyword, for hothasktags
 autocmd BufRead *.hs,*.lhs setlocal com+=:-- iskeyword=@,48-57,_,192-255,.,39
 

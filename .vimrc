@@ -5,6 +5,11 @@ execute pathogen#helptags()
 set undodir=~/.vim/undofiles/
 set undofile
 
+" Save cursor position when leaving. BufWinLeave doesn't work when
+" closing and reopening tabs without quitting vim.
+au BufLeave *.* silent! mkview
+au BufEnter *.* silent! loadview
+
 set laststatus=2 "always show statusbar
 set autoindent "Automatically indent to previous indent
 set autowrite " write file automatically

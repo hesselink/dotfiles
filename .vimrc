@@ -62,6 +62,8 @@ autocmd BufRead *.hs,*.lhs setlocal com+=:-- iskeyword=@,48-57,_,192-255,.,39
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
+" Yank to end of line with Y, more consistent with D and C.
+map Y y$
 " Make with F12
 map <F12> :make<CR><CR>
 " Call make with F11 (useful for lhs)

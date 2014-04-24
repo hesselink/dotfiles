@@ -45,3 +45,5 @@
     renames = copies
 [branch]
     autosetuprebase = always
+[pull]
+    rebase = preserve

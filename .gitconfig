@@ -33,6 +33,7 @@
 [merge]
     conflictstyle = diff3
     defaultToUpstream = true
+    tool = mvimdiff
 [push]
     default = upstream
 [rerere]
@@ -44,7 +45,12 @@
     pushNonFastForward = false
 [diff]
     renames = copies
+    tool = mvimdiff
 [branch]
     autosetuprebase = always
 [pull]
     rebase = preserve
+[difftool "mvimdiff"]
+    cmd = mvim -f -d \"$LOCAL\" \"$REMOTE\"
+[mergetool "mvimdiff"]
+    cmd = mvim -f -d -M -c \"wincmd J\" -c \"set modifiable\" -c \"set write\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"

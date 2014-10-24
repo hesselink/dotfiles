@@ -127,7 +127,7 @@ augroup END
 "augroup END
 
 " Function to allow tab completion, but also insertion of tabs.
-function InsertTabWrapper()
+function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
     return "\<tab>"

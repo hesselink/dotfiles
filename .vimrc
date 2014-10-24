@@ -49,6 +49,7 @@ let mapleader=' '
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>z ZZ
 nnoremap <Leader>e :e
 nnoremap <Leader>p :CtrlP<CR>
 

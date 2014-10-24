@@ -12,6 +12,7 @@
     ci  = commit
     ch  = checkout
     br  = branch
+    chr = cherry-pick
     ff  = merge --ff-only
     wu = log --stat origin..@{0}
     up = !sh -c 'git stash && git pull && git stash pop'

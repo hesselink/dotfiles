@@ -154,15 +154,6 @@ map ,cd :cd %:p:h <CR>
 "edit a file in the directory of the current file.
 map ,e :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-" Select current () block.
-map <buffer> ]' [(v%o
-" Remove current () block.
-map <buffer> ]] ma[(mb%x'bx'ah
-" Create new () block.
-map <buffer> ]s <Esc>`>a)<Esc>`<i(<Esc>
-" Make do-block of visual selection.
-map <buffer> ]d ^<C-V>o^I   <Esc>Rdo<Esc>
-
 " Turn off toolbar in gui
 if has("gui_running")
   set guioptions=egmrt

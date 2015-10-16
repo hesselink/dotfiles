@@ -19,6 +19,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lc = log ORIG_HEAD.. --stat --no-merges
+    lm = log master..origin/master
     wdiff = diff --color-words
     wshow = show --color-words
     blog = !sh -c 'git log $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base master HEAD`..HEAD' -

@@ -71,8 +71,9 @@ map Y y$
 map <F12> :make<CR><CR>
 " Call make with F11 (useful for lhs)
 map <F11> :!make<CR>
-" Open a file through TextMate like search in a new tab
-map <F3> :tabe<CR>:FF<CR>
+" Call stylish to format Haskell.
+vmap <F5> :!stylish-haskell<CR>
+nmap <F5> :%!stylish-haskell<CR>
 
 " Generate tags for haskell, and initialize the find file cache.
 map <F4> :!gen_hasktags.sh<CR><CR>

@@ -8,6 +8,10 @@ cabal-dev/
 *.o
 *.swp
 *.swo
+*.swn
+*.swm
+*.swl
+*.swk
 #*#
 .#*
 .DS_Store
@@ -15,3 +19,4 @@ cabal-dev/
 docs/out
 cabal.sandbox.config
 .cabal-sandbox
+.stack-work

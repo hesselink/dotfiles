@@ -24,7 +24,7 @@
     wshow = show --color-words
     blog = !sh -c 'git log $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base master HEAD`..HEAD' -
     brebase = !sh -c 'git rebase -i $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base master HEAD`' -
-    bdiff = !sh -c 'g diff $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base HEAD master` HEAD' -
+    bdiff = !sh -c 'git diff $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base HEAD master` HEAD' -
     cia = commit --amend -C HEAD
     ciaa = commit --amend -a -C HEAD
     ciav = commit -a -v

@@ -36,7 +36,8 @@
     defaultToUpstream = true
     tool = mvim
 [push]
-    default = upstream
+    default = simple
+    followTags = true
 [rerere]
     enabled = true
 [rebase]

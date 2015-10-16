@@ -46,6 +46,8 @@ let &showbreak = '↳ '
 " set tw=78 " always limit the width of text to 78
 set colorcolumn=100 "show colored column at 100 characters, to prevent too wide text.
 let mapleader=' '
+" don't redraw screen during macros etc.
+set lazyredraw
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>

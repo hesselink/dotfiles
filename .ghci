@@ -4,3 +4,4 @@
 -- :set -optP-include
 -- :set -optPdist/build/autogen/cabal_macros.h
 :set -fno-warn-type-defaults
+:set prompt "λ "

@@ -58,6 +58,9 @@ nnoremap <Leader>p :CtrlP<CR>
 " Haskell comments, add . and ' to iskeyword, for hothasktags
 autocmd BufRead *.hs,*.lhs setlocal com+=:-- iskeyword=@,48-57,_,192-255,.,39
 
+" Set less filetype.
+autocmd BufRead *.less setlocal ft=less
+
 " set backup " don't keep a backup file
 " set viminfo='20,\"50 " read/write a .viminfo file, don't store more
 " than 50 lines of registers

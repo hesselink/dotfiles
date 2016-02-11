@@ -14,12 +14,12 @@
     br  = branch
     chr = cherry-pick
     ff  = merge --ff-only
-    wu = log --stat origin..@{0}
+    wu = log --stat @{upstream}..HEAD
     up = !sh -c 'git stash && git pull && git stash pop'
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lc = log ORIG_HEAD.. --stat --no-merges
-    lm = log master..origin/master
+    lm = log HEAD..@{upstream}
     wdiff = diff --color-words
     wshow = show --color-words
     blog = !sh -c 'git log $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base master HEAD`..HEAD' -

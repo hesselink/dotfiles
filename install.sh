@@ -26,3 +26,6 @@ for file in $(ls -a $dir); do
     ln -s "$dir/$file" "$HOME/$file"
   fi
 done
+
+cd $dir
+git submodule update --init

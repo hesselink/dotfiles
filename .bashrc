@@ -21,6 +21,11 @@ PROG=insta source /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autoc
 alias g=git
 complete -o default -o nospace -F _git g
 
+# docker
+for f in /Applications/Docker.app/Contents/Resources/etc/*.bash-completion; do
+  source $f
+done
+
 # java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 ## gradle

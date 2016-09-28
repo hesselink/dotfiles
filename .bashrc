@@ -6,6 +6,11 @@ shopt -s histappend
 #### close, and read all new history items.
 export PROMPT_COMMAND="history -a; history -n"
 
+# brew
+for f in /usr/local/etc/bash_completion.d/*; do
+  source $f;
+done
+
 # go
 export GOPATH=$HOME/doc
 
@@ -13,7 +18,6 @@ export GOPATH=$HOME/doc
 PROG=insta source /usr/local/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete
 
 # git
-source /usr/local/etc/bash_completion.d/git-completion.bash
 alias g=git
 complete -o default -o nospace -F _git g
 
@@ -29,7 +33,6 @@ function ghc_version ()
     echo \ \(`ghc --version | sed 's/.*version \(.*\)/\1/'`\);
   fi
 }
-source /usr/local/etc/bash_completion.d/git-prompt.sh
 export PS1="\[\033]0;\w\007
 \033[32m\]\u@\h \[\033[33m\w\033[36m\]\$(__git_ps1 \" %s\")\033[34m\]\$(ghc_version)\033[0m\]
 $ "

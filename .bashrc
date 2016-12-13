@@ -33,6 +33,7 @@ done
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 ## gradle
 source $HOME/.bash_completion/gradle-tab-completion.bash
+alias gw=./gradlew
 
 # prompt
 function ghc_version ()

@@ -13,6 +13,13 @@ if [ -d /usr/local/etc/bash_completion.d/ ]; then
   done
 fi
 
+# completion
+if [ -d $HOME/.bash_completion.d ]; then
+  for f in $HOME/.bash_completion.d/*; do
+    source $f;
+  done
+fi
+
 # go
 export GOPATH=$HOME/doc
 

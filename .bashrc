@@ -7,32 +7,39 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; history -n"
 
 # brew
-for f in /usr/local/etc/bash_completion.d/*; do
-  source $f;
-done
+if [ -d /usr/local/etc/bash_completion.d/ ]; then
+  for f in /usr/local/etc/bash_completion.d/*; do
+    source $f;
+  done
+fi
 
 # go
 export GOPATH=$HOME/doc
 
 # insta
-PROG=insta source /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete
+[[ -s /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete ]] &&
+  PROG=insta source /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete
 
 # foundry dev
-source /usr/local/dev-env/bin/profile
+[[ -s /usr/local/dev-env/bin/profile ]] &&
+  source /usr/local/dev-env/bin/profile
 
 # git
 alias g=git
 complete -o default -o nospace -F _git g
 
 # docker
-for f in /Applications/Docker.app/Contents/Resources/etc/*.bash-completion; do
-  source $f
-done
+if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
+  for f in /Applications/Docker.app/Contents/Resources/etc/*.bash-completion; do
+    source $f
+  done
+fi
 
 # java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 ## gradle
-source $HOME/.bash_completion/gradle-tab-completion.bash
+[[ -s $HOME/.bash_completion/gradle-tab-completion.bash ]] &&
+  source $HOME/.bash_completion/gradle-tab-completion.bash
 alias gw=./gradlew
 
 # prompt
@@ -47,7 +54,9 @@ export PS1="\[\033]0;\w\007
 $ "
 
 # haskell
-eval "$(stack --bash-completion-script "$(which stack)")"
+if `which stack >> /dev/null 2>&1`; then
+  eval "$(stack --bash-completion-script "$(which stack)")"
+fi
 
 # node
 export NODE_REPL_HISTORY_FILE=$HOME/.node_history

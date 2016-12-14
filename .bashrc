@@ -52,7 +52,7 @@ alias gw=./gradlew
 # prompt
 function ghc_version ()
 {
-  if which ghc > /dev/null; then
+  if which ghc > /dev/null 2>&1; then
     echo \ \(`ghc --version | sed 's/.*version \(.*\)/\1/'`\);
   fi
 }

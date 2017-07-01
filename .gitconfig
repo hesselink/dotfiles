@@ -20,6 +20,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lc = log ORIG_HEAD.. --stat --no-merges
     lm = log HEAD..@{upstream}
+    ls = ls-tree -r --name-only HEAD
     wdiff = diff --color-words
     wshow = show --color-words
     blog = !sh -c 'git log $1 $2 $3 $4 $5 $6 $7 $8 $9 `git merge-base master HEAD`..HEAD' -
@@ -48,6 +49,7 @@
 [diff]
     renames = copies
     tool = mvimdiff
+    compactionHeuristic = true
 [branch]
     autosetuprebase = always
 [pull]
@@ -65,3 +67,7 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     required = true
+[submodule]
+    fetchJobs = 0
+[commit]
+    verbose = true

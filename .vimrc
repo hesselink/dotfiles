@@ -48,6 +48,9 @@ set colorcolumn=100 "show colored column at 100 characters, to prevent too wide 
 let mapleader=' '
 " don't redraw screen during macros etc.
 set lazyredraw
+" Make % matching with with Haskell lambda's like (\(a,b) -> (b,a))
+" even though there's a backslash before a parenthesis.
+set cpoptions+=M
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>

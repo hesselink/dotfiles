@@ -5,6 +5,16 @@ execute pathogen#helptags()
 set undodir=~/.vim/undofiles/
 set undofile
 
+" Store swap and backup files centrally.
+set directory=$HOME/.vim/swap//
+if !isdirectory(&directory)
+  call mkdir(&directory)
+endif
+set backupdir=$HOME/.vim/backup//
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir)
+endif
+
 " Save cursor position when leaving. BufWinLeave doesn't work when
 " closing and reopening tabs without quitting vim.
 au BufLeave *.* silent! mkview

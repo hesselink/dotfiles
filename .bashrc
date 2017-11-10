@@ -27,10 +27,6 @@ export GOPATH=$HOME/doc
 [[ -s /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete ]] &&
   PROG=insta source /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete
 
-# foundry dev
-[[ -s /usr/local/dev-env/bin/profile ]] &&
-  source /usr/local/dev-env/bin/profile
-
 # git
 alias g=git
 complete -o default -o nospace -F _git g

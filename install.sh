@@ -16,6 +16,15 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 me="$(basename "${BASH_SOURCE[0]}")"
 ignores=". .. $me .git .gitmodules"
 
+if ! which python3 > /dev/null; then
+  echo "Python 3 not found."
+  exit 1
+fi
+
+if ! which qualia > /dev/null; then
+  pip3 install mir.qualia
+fi
+
 for file in $(ls -a $dir); do
   if elem "$file" "$ignores"; then
     # echo $file ignored.

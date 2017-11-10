@@ -21,3 +21,4 @@ docs/out
 cabal.sandbox.config
 .cabal-sandbox
 .stack-work
+.vscode

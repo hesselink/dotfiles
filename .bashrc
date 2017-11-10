@@ -64,6 +64,16 @@ fi
 # node
 export NODE_REPL_HISTORY_FILE=$HOME/.node_history
 
+# python
+if [ -d $HOME/Library/Python/2.7/bin ]; then
+  export PATH=$HOME/Library/Python/2.7/bin/:$PATH
+fi
+
+# rust
+if [ -d $HOME/.cargo/bin ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # general
 function up()
 {

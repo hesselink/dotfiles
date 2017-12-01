@@ -37,6 +37,7 @@
     wip = !sh -c 'git add -A && git commit -m WIP'
     pop = reset HEAD^
     sup = !sh -c 'cd `git rev-parse --show-toplevel` && git submodule update --init' -
+    pgdev = push origin HEAD:refs/for/develop
 [merge]
     conflictstyle = diff3
     defaultToUpstream = true

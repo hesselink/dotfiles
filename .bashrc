@@ -6,15 +6,19 @@ shopt -s histappend
 #### close, and read all new history items.
 export PROMPT_COMMAND="history -a; history -n"
 
-# brew
-if [ -d /usr/local/etc/bash_completion.d/ ]; then
+# completion
+
+if [ -d /usr/local/etc/bash_completion.d/ ]; then # brew
   for f in /usr/local/etc/bash_completion.d/*; do
     source $f;
   done
 fi
 
-# completion
-if [ -d $HOME/.bash_completion.d ]; then
+if [ -f /etc/profile.d/bash_completion.sh ]; then # centos
+  source /etc/profile.d/bash_completion.sh
+fi
+
+if [ -d $HOME/.bash_completion.d ]; then # custom
   for f in $HOME/.bash_completion.d/*; do
     source $f;
   done

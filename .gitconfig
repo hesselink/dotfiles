@@ -38,6 +38,7 @@
     pop = reset HEAD^
     sup = !sh -c 'cd `git rev-parse --show-toplevel` && git submodule update --init' -
     pgdev = push origin HEAD:refs/for/develop
+    pf = push --force-with-lease
 [merge]
     conflictstyle = diff3
     defaultToUpstream = true

@@ -43,7 +43,8 @@ if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
 fi
 
 # java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home)
+
 ## gradle
 [[ -s $HOME/.bash_completion/gradle-tab-completion.bash ]] &&
   source $HOME/.bash_completion/gradle-tab-completion.bash

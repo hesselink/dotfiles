@@ -183,7 +183,12 @@ endif
 " Turn off blinking cursor in non-insert modes.
 let &guicursor = substitute(&guicursor, 'n-v-c:', '&blinkon0-', '')
 " Have yank and paste use the system clipboard.
-set clipboard=autoselect,unnamedplus
+set clipboard=autoselect
+if has("unnamedplus")
+  set clipboard+=unnamedplus
+else
+  set clipboard+=unnamed
+endif
 
 "------------------------------------------------------------
 " CtrlP

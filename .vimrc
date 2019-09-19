@@ -177,7 +177,10 @@ map ,e :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Turn off toolbar in gui
 if has("gui_running")
-  set guioptions=aegmrt
+  set guioptions=egmrt
+  if has("unnamedplus")
+    set guioptions+=a
+  endif
   set guifont=Menlo\ Regular:h12
   colorscheme solarized
   set lines=55 columns=160
@@ -185,11 +188,10 @@ endif
 " Turn off blinking cursor in non-insert modes.
 let &guicursor = substitute(&guicursor, 'n-v-c:', '&blinkon0-', '')
 " Have yank and paste use the system clipboard.
-set clipboard=autoselect
 if has("unnamedplus")
-  set clipboard+=unnamedplus
+  set clipboard=autoselect,unnamedplus
 else
-  set clipboard+=unnamed
+  set clipboard=unnamed
 endif
 
 "------------------------------------------------------------

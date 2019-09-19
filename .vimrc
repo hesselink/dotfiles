@@ -61,6 +61,8 @@ set lazyredraw
 " Make % matching with with Haskell lambda's like (\(a,b) -> (b,a))
 " even though there's a backslash before a parenthesis.
 set cpoptions+=M
+" Turn off modeline (reading config from first lines of opened file)
+set nomodeline
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>

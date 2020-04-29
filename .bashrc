@@ -43,7 +43,7 @@ if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
 fi
 
 # java
-[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home)
+[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 [[ -f /usr/libexec/java_home ]] && export JAVA_1_8_HOME=$(/usr/libexec/java_home -v 1.8)
 [[ -f /usr/libexec/java_home ]] && export JAVA_1_6_HOME=$(/usr/libexec/java_home -v 1.6)
 

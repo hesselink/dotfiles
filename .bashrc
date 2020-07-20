@@ -5,6 +5,7 @@ shopt -s histappend
 #### Immediately append new commands to history instead of at terminal
 #### close, and read all new history items.
 export PROMPT_COMMAND="history -a; history -n"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # brew
 

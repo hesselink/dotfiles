@@ -51,8 +51,8 @@ fi
 
 # java
 [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-[[ -f /usr/libexec/java_home ]] && export JAVA_1_8_HOME=$(/usr/libexec/java_home -v 1.8)
-[[ -f /usr/libexec/java_home ]] && export JAVA_1_6_HOME=$(/usr/libexec/java_home -v 1.6)
+[[ -f /usr/libexec/java_home ]] && export JAVA_1_8_HOME=$(/usr/libexec/java_home -v 1.8 -F 2> /dev/null)
+[[ -f /usr/libexec/java_home ]] && export JAVA_1_6_HOME=$(/usr/libexec/java_home -v 1.6 -F 2> /dev/null)
 
 ## gradle
 [[ -s $HOME/.bash_completion/gradle-tab-completion.bash ]] &&

@@ -6,6 +6,12 @@ shopt -s histappend
 #### close, and read all new history items.
 export PROMPT_COMMAND="history -a; history -n"
 
+# brew
+
+if [ -d /usr/local/sbin ]; then
+  PATH=/usr/local/sbin:$PATH
+fi
+
 # completion
 
 if [ -d /usr/local/etc/bash_completion.d/ ]; then # brew

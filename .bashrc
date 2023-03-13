@@ -38,9 +38,15 @@ export GOPATH=$HOME/doc
 [[ -s /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete ]] &&
   PROG=insta source /usr/local/Homebrew/Library/Taps/palantir/homebrew-insta/autocomplete/bash_autocomplete
 
+# kubectl-scripts
+if [[ -f $HOME/code/kubectl-scripts/bash.sh ]]; then
+    source $HOME/code/kubectl-scripts/bash.sh
+fi
+
+
 # git
 alias g=git
-complete -o default -o nospace -F _git g
+__git_complete g __git_main
 
 # docker
 if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
@@ -50,7 +56,7 @@ if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
 fi
 
 # java
-[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 [[ -f /usr/libexec/java_home ]] && export JAVA_1_8_HOME=$(/usr/libexec/java_home -v 1.8 -F 2> /dev/null)
 [[ -f /usr/libexec/java_home ]] && export JAVA_1_6_HOME=$(/usr/libexec/java_home -v 1.6 -F 2> /dev/null)
 

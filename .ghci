@@ -5,3 +5,4 @@
 -- :set -optPdist/build/autogen/cabal_macros.h
 :set -fno-warn-type-defaults
 :set prompt "λ "
+:set -fdefer-typed-holes

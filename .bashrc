@@ -9,17 +9,26 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # brew
 
-if [ -d /usr/local/sbin ]; then
-  PATH=/usr/local/sbin:$PATH
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [ -d "{HOMEBREW_PREFIX}/bin" ]; then
+    PATH="{HOMEBREW_PREFIX}/bin":$PATH
+  fi
+  if [ -d "{HOMEBREW_PREFIX}/sbin" ]; then
+    PATH="{HOMEBREW_PREFIX}/sbin":$PATH
+  fi
+
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
 fi
 
 # completion
-
-if [ -d /usr/local/etc/bash_completion.d/ ]; then # brew
-  for f in /usr/local/etc/bash_completion.d/*; do
-    source $f;
-  done
-fi
 
 if [ -f /etc/profile.d/bash_completion.sh ]; then # centos
   source /etc/profile.d/bash_completion.sh

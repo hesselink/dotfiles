@@ -38,3 +38,6 @@ done
 
 cd $dir
 git submodule update --init
+if [ -d .vim/bundle/coc.nvim ]; then
+  (cd .vim/bundle/coc.nvim && yarn install)
+fi

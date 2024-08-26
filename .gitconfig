@@ -4,12 +4,7 @@
     editor = which mvim > /dev/null 2>&1 && mvim --remote-wait-silent $@ || vim
 [user]
     name = Erik Hesselink
-# BEGIN palantir
-    #email = ehesselink@palantir.com
-# END palantir
-# BEGIN personal
-    #email = hesselink@gmail.com
-# END personal
+    email = hesselink@gmail.com
 [color]
     ui = auto
 [alias]

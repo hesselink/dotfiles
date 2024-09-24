@@ -55,6 +55,7 @@ fi
 
 # git
 alias g=git
+_completion_loader git
 __git_complete g __git_main
 
 # docker

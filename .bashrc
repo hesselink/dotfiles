@@ -7,6 +7,11 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; history -n"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# keychain/ssh-agent
+if type keychain &> /dev/null; then
+  eval $(keychain --eval --quiet id_ed25519)
+fi
+
 # brew
 
 if type brew &>/dev/null; then

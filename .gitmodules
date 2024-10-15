@@ -13,9 +13,6 @@
 [submodule ".vim/bundle/gundo"]
 	path = .vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/typescript-vim"]
-	path = .vim/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
 [submodule ".vim/bundle/vim-signify"]
 	path = .vim/bundle/vim-signify
 	url = https://github.com/mhinz/vim-signify.git

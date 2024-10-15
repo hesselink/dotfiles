@@ -60,8 +60,12 @@ fi
 
 # git
 alias g=git
-_completion_loader git
-__git_complete g __git_main
+if [[ $(type -t _completion_loader) == function ]]; then
+  _completion_loader git
+fi
+if [[ $(type -t __git_complete) == function ]]; then
+  __git_complete g __git_main
+fi
 
 # docker
 if [ -d /Applications/Docker.app/Contents/Resources/etc/ ]; then
